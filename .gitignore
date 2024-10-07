@@ -1,0 +1,31 @@
+# Ignorar archivos .class y .DS_Store
+*.class
+*.DS_Store
+
+# Ignorar archivos .ini
+*.ini
+
+# Ignorar directorio de salida de compilación de Maven
+/target
+
+# Herramientas móviles para Java (J2ME)
+.mtj.tmp/
+
+# Archivos de paquetes
+*.jar
+*.war
+*.ear
+
+# Archivos de logs de error de la máquina virtual Java
+hs_err_pid*
+
+# Archivos y directorios específicos de plugins y configuraciones de IDEs
+/.tomcatplugin
+/work/
+/.settings/org.eclipse.m2e.core.prefs
+/.classpath
+/.idea/
+/.settings/
+
+# Ignorar directorio de node_modules
+src/main/webapp/resources/core/js/node_modules
