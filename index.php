@@ -1,9 +1,15 @@
 <?php
-include 'mysql_database_manager.php';
+include_once('mysql_database_manager.php');
+include_once('PokedexController.php');
+include_once('PokedexModel.php');
+include_once("IncludeFilePresenter.php");
 
-$config = parse_ini_file("config.ini");
+$config = parse_ini_file("config.ini"); //conexion a la bd
 
 $database =  new mysql_database_manager($config['host'], $config['username'], $config['password'], $config['database'], $config['port']);
+$pokedexModel = new PokedexModel($database);
+$presenter = new IncludeFilePresenter();
+$pokedexController =  new PokedexController($pokedexModel, $presenter);
 
 ?>
 
@@ -14,18 +20,16 @@ include_once 'header.php';
 
 <?php
 $endpoint=$_GET['page'];
-switch($endpoint){
+switch ($endpoint) {
     case 'listado_pokemon':
-        $query = "SELECT p.id, p.nro_id_unico, p.nombre, p.imagen, p.descripcion as pokemon_descripcion, t.descripcion as tipo_descripcion FROM pokemon  p JOIN tipo t ON p.tipo_id = t.id";
-        $pokedex = $database->query($query);
-        include_once 'listado_pokemon.php';
+        $pokedexController->listarPokemons();
         break;
 
-        case 'inicio':
-            include_once 'inicio.php';
-            break;
-    default:
+    case 'inicio':
         include_once 'inicio.php';
+        break;
+
+    default:
         break;
 }
 ?>
