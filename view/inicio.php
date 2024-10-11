@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="./imagenes/Blastoise.png" class="card-img-top img-fluid" style="height: 200px; object-fit: contain;" alt="' . htmlspecialchars($pokemon["nombre"]) . '">
+                    <img src="../imagenes/Blastoise.png" class="card-img-top img-fluid" style="height: 200px; object-fit: contain;" alt="' . htmlspecialchars($pokemon[" nombre"]) . '">
                     <div class="card-body">
                         <h5 class="card-title">Producto 1</h5>
                         <p class="card-text">Descripción breve del producto 1.</p>
@@ -15,7 +15,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="./imagenes/Blastoise.png" class="card-img-top img-fluid" style="height: 200px; object-fit: contain;" alt="' . htmlspecialchars($pokemon["nombre"]) . '">
+                    <img src="../imagenes/Blastoise.png" class="card-img-top img-fluid" style="height: 200px; object-fit: contain;" alt="' . htmlspecialchars($pokemon[" nombre"]) . '">
 
                     <div class="card-body">
                         <h5 class="card-title">Producto 2</h5>
@@ -26,7 +26,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="./imagenes/Blastoise.png" class="card-img-top img-fluid" style="height: 200px; object-fit: contain;" alt="' . htmlspecialchars($pokemon["nombre"]) . '">
+                    <img src="../imagenes/Blastoise.png" class="card-img-top img-fluid" style="height: 200px; object-fit: contain;" alt="' . htmlspecialchars($pokemon[" nombre"]) . '">
 
                     <div class="card-body">
                         <h5 class="card-title">Producto 3</h5>

@@ -16,13 +16,13 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.php?page=inicio">Inicio</a>
+                    <a class="nav-link" href="../index.php?page=inicio">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.php?page=listado_pokemon">Pokedex</a>
+                    <a class="nav-link" href="../index.php?page=listado_pokemon">Pokedex</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.php?page=nosotros">Nosotros</a>
+                    <a class="nav-link" href="../index.php?page=nosotros">Nosotros</a>
                 </li>
             </ul>
         </div>

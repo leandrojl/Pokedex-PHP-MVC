@@ -7,7 +7,6 @@
 
         echo '<div class="row">';
 
-
         foreach ($data['pokedex'] as $pokemon) {
             echo '
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
