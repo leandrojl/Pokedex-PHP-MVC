@@ -1,5 +1,5 @@
 <?php
-class PokedexController{
+class NosotrosController{
 
     private $model;
 
@@ -11,11 +11,11 @@ class PokedexController{
         $this->presenter = $presenter;
     }
 
+
     public function listar()
     {
-        $data['pokedex'] = $this->model->getAllPokemons();
-        $this->presenter->show('listado_pokemon',$data);
-
+        $data = []; //no hay llamado a la base de datos
+        $this->presenter->show('nosotros',$data);
     }
 
 

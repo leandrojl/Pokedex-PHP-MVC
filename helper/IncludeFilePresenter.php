@@ -10,7 +10,10 @@ class IncludeFilePresenter{
 
 
     public function show($view,$data){
-        include_once($view);
+
+        include_once './view/header.mustache';
+        include_once('./view/'.$view);
+        include_once './view/footer.mustache';
     }
 
 }
