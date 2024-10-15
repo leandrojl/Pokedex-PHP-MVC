@@ -12,7 +12,7 @@ include_once('./model/InicioModel.php');
 include_once('./model/PokedexModel.php');
 include_once('./model/NosotrosModel.php');
 
-include_once('./vendor/mustache/src/Mustache/Autoloader.php');
+include_once('./vendor/autoload.php');
 
 
 class Configuration{
@@ -62,7 +62,7 @@ class Configuration{
 
     public function getRouter(){
 
-        return new Router($this,"getInicioController", "listar"); //le paso el objeto configuration
+        return new Router($this,"getInicioController", "listar"); //le paso el objeto configuration con un metodo predeterminado
     }
 }
 ?>

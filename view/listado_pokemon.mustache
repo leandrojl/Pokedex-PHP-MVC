@@ -15,6 +15,14 @@
                             <p class="card-text"></p>
                             <img src="public/imagenes/{{tipo_descripcion}}.png" class="img-fluid mt-auto" style="height: 50px; width: 50px; object-fit: contain;" alt="">
                         </div>
+                        <div class="d-flex justify-content-between mt-3">
+                            <!-- Formulario para modificar o eliminar -->
+                            <form action="index.php" method="GET" class="d-inline">
+                                <input type="hidden" name="pokemon_id" value="{{id}}">
+                                <button type="submit" name="action" value="modificar" class="btn btn-info">Modificar</button>
+                                <button type="submit" name="action" value="eliminarPokemon" class="btn btn-danger">Eliminar</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             {{/pokedex}}
