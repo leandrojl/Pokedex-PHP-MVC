@@ -15,8 +15,20 @@ class mysql_database_manager {
     }
 
     public function query($query) {
-            $sqlResult = mysqli_query($this->connection, $query);
+        $sqlResult = mysqli_query($this->connection, $query);
+
+        // Verifica si la consulta falló y muestra el error
+        if (!$sqlResult) {
+            die("Error en la consulta SQL: " . mysqli_error($this->connection));
+        }
+
+        // Solo intenta fetch_all si el resultado es un objeto, lo que significa que se trata de una consulta SELECT
+        if ($sqlResult instanceof mysqli_result) {
             return mysqli_fetch_all($sqlResult, MYSQLI_ASSOC);
+        }
+
+        // Si es una consulta DELETE, INSERT o UPDATE, devuelve el resultado de la consulta directamente
+        return $sqlResult;
     }
 
     public function __destruct(){
